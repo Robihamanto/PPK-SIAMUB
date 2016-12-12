@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 12, 2016 at 02:21 AM
+-- Generation Time: Dec 12, 2016 at 06:33 AM
 -- Server version: 10.1.16-MariaDB
 -- PHP Version: 7.0.9
 
@@ -100,7 +100,7 @@ INSERT INTO `khs` (`id`, `nim`, `kode`, `nilai`) VALUES
 (1, '145150207111067', 'TIFASD', 'A'),
 (2, '145150207111067', 'TIFPPK', 'A'),
 (3, '145150201111066', 'TIFASD', 'B+'),
-(4, '145150201111066', 'TIFPPK', 'A');
+(6, '145150201111066', 'TIFPPK', 'B');
 
 -- --------------------------------------------------------
 
@@ -138,7 +138,9 @@ CREATE TABLE `mahasiswa` (
 
 INSERT INTO `mahasiswa` (`id`, `nim`, `password`, `fullname`, `fakultas`, `jurusan`, `seleksi`, `status`) VALUES
 (1, '145150207111067', 'asdasd', 'Robihamanto', 'Ilmu Komputer', 'Teknik Informatika', 'Minat dan Kemampuan', 'Aktif'),
-(2, '145150201111066', 'qweqwe', 'Andre Rizal Sinaga', 'Ilmu Komputer', 'Teknik Informatika', 'SELEKSI NASIONAL MASUK PERGURUAN TINGGI NEGERI Brawijaya - Malang', 'Aktif');
+(2, '145150201111066', 'qweqwe', 'Andre Rizal Sinaga', 'Ilmu Komputer', 'Teknik Informatika', 'SELEKSI NASIONAL MASUK PERGURUAN TINGGI NEGERI Brawijaya - Malang', 'Aktif'),
+(3, '145150201111065', 'zxczxc', 'Bagus Satria Wiguna', 'Ilmu Komputer', 'Teknik Informatika', 'Seleksi Bersama Masuk Perguruan Tinggi Negeri Brawijaya - Malang', 'Aktif'),
+(4, '145150200111281', 'qweasd', 'Kevin Charlie', 'Ilmu Komputer', 'Teknik Informatika', 'Seleksi Bersama Masuk Perguruan Tinggi Negeri Brawijaya - Malang', 'Aktif');
 
 -- --------------------------------------------------------
 
@@ -234,7 +236,7 @@ ALTER TABLE `jurusan`
 -- AUTO_INCREMENT for table `khs`
 --
 ALTER TABLE `khs`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 --
 -- AUTO_INCREMENT for table `krs`
 --
@@ -244,12 +246,12 @@ ALTER TABLE `krs`
 -- AUTO_INCREMENT for table `mahasiswa`
 --
 ALTER TABLE `mahasiswa`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT for table `matakuliah`
 --
 ALTER TABLE `matakuliah`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
