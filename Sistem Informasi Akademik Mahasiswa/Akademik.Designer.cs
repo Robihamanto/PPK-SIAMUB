@@ -1,4 +1,4 @@
-﻿namespace Sistem_Informasi_Akademik_Mahasiswa
+namespace Sistem_Informasi_Akademik_Mahasiswa
 {
     partial class FormAkademik
     {
@@ -40,6 +40,7 @@
             this.labelSeleksi = new System.Windows.Forms.Label();
             this.Status = new System.Windows.Forms.Label();
             this.Labelstatus = new System.Windows.Forms.Label();
+            this.linkLabelMataKuliah = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // splitterBiodata
@@ -165,12 +166,25 @@
             this.Labelstatus.TabIndex = 13;
             this.Labelstatus.Text = "Aktif";
             // 
+            // linkLabelMataKuliah
+            // 
+            this.linkLabelMataKuliah.AutoSize = true;
+            this.linkLabelMataKuliah.LinkColor = System.Drawing.Color.Black;
+            this.linkLabelMataKuliah.Location = new System.Drawing.Point(436, 149);
+            this.linkLabelMataKuliah.Name = "linkLabelMataKuliah";
+            this.linkLabelMataKuliah.Size = new System.Drawing.Size(63, 13);
+            this.linkLabelMataKuliah.TabIndex = 15;
+            this.linkLabelMataKuliah.TabStop = true;
+            this.linkLabelMataKuliah.Text = "Mata Kuliah";
+            this.linkLabelMataKuliah.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelMataKuliah_LinkClicked);
+            // 
             // FormAkademik
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(701, 469);
+            this.Controls.Add(this.linkLabelMataKuliah);
             this.Controls.Add(this.Labelstatus);
             this.Controls.Add(this.Status);
             this.Controls.Add(this.labelSeleksi);
@@ -207,5 +221,6 @@
         private System.Windows.Forms.Label labelSeleksi;
         private System.Windows.Forms.Label Status;
         private System.Windows.Forms.Label Labelstatus;
+        private System.Windows.Forms.LinkLabel linkLabelMataKuliah;
     }
 }
