@@ -1,4 +1,4 @@
-﻿using MySql.Data.MySqlClient;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -21,13 +21,14 @@ namespace Sistem_Informasi_Akademik_Mahasiswa
         private MySqlCommand commandDatabase;
         private String nim;
 
-        public FormAkademik(String nim, String Nama)
+        public FormAkademik(String nim)
         {
-            this.nim = nim;
             InitializeComponent();
+            linkLabelMataKuliah.Visible = false;
+            this.nim = nim;
             if(nim == "admin")
             {
-
+              linkLabelMataKuliah.Visible = true;
             }else
             {
                 mahasiswa();
@@ -119,6 +120,13 @@ namespace Sistem_Informasi_Akademik_Mahasiswa
         private void FormAkademik_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void linkLabelMataKuliah_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            FormMataKuliah matkul = new FormMataKuliah(nim);
+            matkul.MdiParent = this;
+            matkul.Show();
         }
     }
 }
