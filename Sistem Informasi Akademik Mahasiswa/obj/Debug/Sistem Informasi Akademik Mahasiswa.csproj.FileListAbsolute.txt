@@ -1,0 +1,15 @@
+c:\users\robi hamanto\documents\visual studio 2015\Projects\Sistem Informasi Akademik Mahasiswa\Sistem Informasi Akademik Mahasiswa\bin\Debug\Sistem Informasi Akademik Mahasiswa.exe.config
+c:\users\robi hamanto\documents\visual studio 2015\Projects\Sistem Informasi Akademik Mahasiswa\Sistem Informasi Akademik Mahasiswa\bin\Debug\Sistem Informasi Akademik Mahasiswa.exe
+c:\users\robi hamanto\documents\visual studio 2015\Projects\Sistem Informasi Akademik Mahasiswa\Sistem Informasi Akademik Mahasiswa\bin\Debug\Sistem Informasi Akademik Mahasiswa.pdb
+c:\users\robi hamanto\documents\visual studio 2015\Projects\Sistem Informasi Akademik Mahasiswa\Sistem Informasi Akademik Mahasiswa\obj\Debug\Sistem Informasi Akademik Mahasiswa.csprojResolveAssemblyReference.cache
+c:\users\robi hamanto\documents\visual studio 2015\Projects\Sistem Informasi Akademik Mahasiswa\Sistem Informasi Akademik Mahasiswa\obj\Debug\Sistem_Informasi_Akademik_Mahasiswa.FormLogin.resources
+c:\users\robi hamanto\documents\visual studio 2015\Projects\Sistem Informasi Akademik Mahasiswa\Sistem Informasi Akademik Mahasiswa\obj\Debug\Sistem_Informasi_Akademik_Mahasiswa.Properties.Resources.resources
+c:\users\robi hamanto\documents\visual studio 2015\Projects\Sistem Informasi Akademik Mahasiswa\Sistem Informasi Akademik Mahasiswa\obj\Debug\Sistem Informasi Akademik Mahasiswa.csproj.GenerateResource.Cache
+c:\users\robi hamanto\documents\visual studio 2015\Projects\Sistem Informasi Akademik Mahasiswa\Sistem Informasi Akademik Mahasiswa\obj\Debug\Sistem Informasi Akademik Mahasiswa.exe
+c:\users\robi hamanto\documents\visual studio 2015\Projects\Sistem Informasi Akademik Mahasiswa\Sistem Informasi Akademik Mahasiswa\obj\Debug\Sistem Informasi Akademik Mahasiswa.pdb
+c:\users\robi hamanto\documents\visual studio 2015\Projects\Sistem Informasi Akademik Mahasiswa\Sistem Informasi Akademik Mahasiswa\bin\Debug\MySql.Data.dll
+c:\users\robi hamanto\documents\visual studio 2015\Projects\Sistem Informasi Akademik Mahasiswa\Sistem Informasi Akademik Mahasiswa\bin\Debug\MySql.Data.xml
+C:\Users\Robi hamanto\Documents\Visual Studio 2015\Projects\Sistem Informasi Akademik Mahasiswa\Sistem Informasi Akademik Mahasiswa\obj\Debug\Sistem_Informasi_Akademik_Mahasiswa.FormMataKuliah.resources
+C:\Users\Robi hamanto\Documents\Visual Studio 2015\Projects\Sistem Informasi Akademik Mahasiswa\Sistem Informasi Akademik Mahasiswa\obj\Debug\Sistem_Informasi_Akademik_Mahasiswa.FormAkademik.resources
+C:\Users\Robi hamanto\Documents\Visual Studio 2015\Projects\Sistem Informasi Akademik Mahasiswa\Sistem Informasi Akademik Mahasiswa\obj\Debug\Sistem_Informasi_Akademik_Mahasiswa.FormJadwal.resources
+C:\Users\Robi hamanto\Documents\Visual Studio 2015\Projects\Sistem Informasi Akademik Mahasiswa\Sistem Informasi Akademik Mahasiswa\obj\Debug\Sistem_Informasi_Akademik_Mahasiswa.FormKartuHasilStudi.resources
