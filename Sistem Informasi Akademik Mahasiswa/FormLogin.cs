@@ -33,9 +33,8 @@ namespace Sistem_Informasi_Akademik_Mahasiswa
         private void buttonMasuk_Click(object sender, EventArgs e)
         {
             // Your query,
-            if (textBoxNim.Text.Equals("admin"))
+            if (textBoxNim.Text.Equals("admin") && textBoxPassword.Text.Equals("admin"))
             {
-                MessageBox.Show("admin");
                 query = "SELECT * FROM administrator";
             }
             else if(textBoxNim.Text != null)
@@ -69,8 +68,8 @@ namespace Sistem_Informasi_Akademik_Mahasiswa
                     {
                         // As our database, the array will contain : ID 0, FIRST_NAME 1,LAST_NAME 2, ADDRESS 3
                         // Do something with every received database ROW
-                        string[] row = { reader.GetString(1), reader.GetString(2)};
-                        akademik = new FormAkademik(row[0], row[1]);
+                        string[] row = { reader.GetString(1)};
+                        akademik = new FormAkademik(row[0]);
                     }
                     this.Hide();
                     akademik.ShowDialog();

@@ -32,6 +32,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Custom-Icon-Design-Flatastic-11-Comment.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="MySql.Data, Version=6.9.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -68,6 +71,18 @@
     <Compile Include="Jadwal.Designer.cs">
       <DependentUpon>Jadwal.cs</DependentUpon>
     </Compile>
+    <Compile Include="Kelas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Kelas.Designer.cs">
+      <DependentUpon>Kelas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KartuHasilStudiAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KartuHasilStudiAdmin.Designer.cs">
+      <DependentUpon>KartuHasilStudiAdmin.cs</DependentUpon>
+    </Compile>
     <Compile Include="KartuHasilStudi.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -79,6 +94,12 @@
     </Compile>
     <Compile Include="KartuRencanaStudi.Designer.cs">
       <DependentUpon>KartuRencanaStudi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mahasiswa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mahasiswa.Designer.cs">
+      <DependentUpon>Mahasiswa.cs</DependentUpon>
     </Compile>
     <Compile Include="MataKuliah.cs">
       <SubType>Form</SubType>
@@ -97,8 +118,17 @@
     <EmbeddedResource Include="Jadwal.resx">
       <DependentUpon>Jadwal.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Kelas.resx">
+      <DependentUpon>Kelas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KartuHasilStudiAdmin.resx">
+      <DependentUpon>KartuHasilStudiAdmin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="KartuHasilStudi.resx">
       <DependentUpon>KartuHasilStudi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mahasiswa.resx">
+      <DependentUpon>Mahasiswa.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MataKuliah.resx">
       <DependentUpon>MataKuliah.cs</DependentUpon>
@@ -128,6 +158,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Login.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Custom-Icon-Design-Flatastic-11-Comment.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

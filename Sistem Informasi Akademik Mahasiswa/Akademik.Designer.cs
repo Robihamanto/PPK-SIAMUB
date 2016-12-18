@@ -1,4 +1,4 @@
-namespace Sistem_Informasi_Akademik_Mahasiswa
+﻿namespace Sistem_Informasi_Akademik_Mahasiswa
 {
     partial class FormAkademik
     {
@@ -41,6 +41,13 @@ namespace Sistem_Informasi_Akademik_Mahasiswa
             this.Status = new System.Windows.Forms.Label();
             this.Labelstatus = new System.Windows.Forms.Label();
             this.linkLabelMataKuliah = new System.Windows.Forms.LinkLabel();
+            this.linkLabelKelas = new System.Windows.Forms.LinkLabel();
+            this.pictureBoxFoto = new System.Windows.Forms.PictureBox();
+            this.buttonUbahFoto = new System.Windows.Forms.Button();
+            this.openFileDialogFoto = new System.Windows.Forms.OpenFileDialog();
+            this.linkLabelMahasiswa = new System.Windows.Forms.LinkLabel();
+            this.buttonKeluar = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFoto)).BeginInit();
             this.SuspendLayout();
             // 
             // splitterBiodata
@@ -170,7 +177,7 @@ namespace Sistem_Informasi_Akademik_Mahasiswa
             // 
             this.linkLabelMataKuliah.AutoSize = true;
             this.linkLabelMataKuliah.LinkColor = System.Drawing.Color.Black;
-            this.linkLabelMataKuliah.Location = new System.Drawing.Point(436, 149);
+            this.linkLabelMataKuliah.Location = new System.Drawing.Point(548, 85);
             this.linkLabelMataKuliah.Name = "linkLabelMataKuliah";
             this.linkLabelMataKuliah.Size = new System.Drawing.Size(63, 13);
             this.linkLabelMataKuliah.TabIndex = 15;
@@ -178,12 +185,74 @@ namespace Sistem_Informasi_Akademik_Mahasiswa
             this.linkLabelMataKuliah.Text = "Mata Kuliah";
             this.linkLabelMataKuliah.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelMataKuliah_LinkClicked);
             // 
+            // linkLabelKelas
+            // 
+            this.linkLabelKelas.AutoSize = true;
+            this.linkLabelKelas.LinkColor = System.Drawing.Color.Black;
+            this.linkLabelKelas.Location = new System.Drawing.Point(548, 107);
+            this.linkLabelKelas.Name = "linkLabelKelas";
+            this.linkLabelKelas.Size = new System.Drawing.Size(33, 13);
+            this.linkLabelKelas.TabIndex = 17;
+            this.linkLabelKelas.TabStop = true;
+            this.linkLabelKelas.Text = "Kelas";
+            this.linkLabelKelas.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelNilai_LinkClicked);
+            // 
+            // pictureBoxFoto
+            // 
+            this.pictureBoxFoto.Location = new System.Drawing.Point(22, 61);
+            this.pictureBoxFoto.Name = "pictureBoxFoto";
+            this.pictureBoxFoto.Size = new System.Drawing.Size(71, 109);
+            this.pictureBoxFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxFoto.TabIndex = 19;
+            this.pictureBoxFoto.TabStop = false;
+            // 
+            // buttonUbahFoto
+            // 
+            this.buttonUbahFoto.Location = new System.Drawing.Point(22, 180);
+            this.buttonUbahFoto.Name = "buttonUbahFoto";
+            this.buttonUbahFoto.Size = new System.Drawing.Size(71, 23);
+            this.buttonUbahFoto.TabIndex = 20;
+            this.buttonUbahFoto.Text = "Ubah Foto";
+            this.buttonUbahFoto.UseVisualStyleBackColor = true;
+            this.buttonUbahFoto.Click += new System.EventHandler(this.buttonUbahFoto_Click);
+            // 
+            // openFileDialogFoto
+            // 
+            this.openFileDialogFoto.FileName = "openFileDialog1";
+            // 
+            // linkLabelMahasiswa
+            // 
+            this.linkLabelMahasiswa.AutoSize = true;
+            this.linkLabelMahasiswa.LinkColor = System.Drawing.Color.Black;
+            this.linkLabelMahasiswa.Location = new System.Drawing.Point(548, 63);
+            this.linkLabelMahasiswa.Name = "linkLabelMahasiswa";
+            this.linkLabelMahasiswa.Size = new System.Drawing.Size(60, 13);
+            this.linkLabelMahasiswa.TabIndex = 22;
+            this.linkLabelMahasiswa.TabStop = true;
+            this.linkLabelMahasiswa.Text = "Mahasiswa";
+            this.linkLabelMahasiswa.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelMahasiswa_LinkClicked);
+            // 
+            // buttonKeluar
+            // 
+            this.buttonKeluar.Location = new System.Drawing.Point(614, 12);
+            this.buttonKeluar.Name = "buttonKeluar";
+            this.buttonKeluar.Size = new System.Drawing.Size(75, 23);
+            this.buttonKeluar.TabIndex = 24;
+            this.buttonKeluar.Text = "Keluar";
+            this.buttonKeluar.UseVisualStyleBackColor = true;
+            this.buttonKeluar.Click += new System.EventHandler(this.buttonKeluar_Click);
+            // 
             // FormAkademik
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(701, 469);
+            this.Controls.Add(this.buttonKeluar);
+            this.Controls.Add(this.linkLabelMahasiswa);
+            this.Controls.Add(this.buttonUbahFoto);
+            this.Controls.Add(this.pictureBoxFoto);
+            this.Controls.Add(this.linkLabelKelas);
             this.Controls.Add(this.linkLabelMataKuliah);
             this.Controls.Add(this.Labelstatus);
             this.Controls.Add(this.Status);
@@ -202,6 +271,7 @@ namespace Sistem_Informasi_Akademik_Mahasiswa
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Akademik";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormAkademik_FormClosed);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFoto)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -222,5 +292,11 @@ namespace Sistem_Informasi_Akademik_Mahasiswa
         private System.Windows.Forms.Label Status;
         private System.Windows.Forms.Label Labelstatus;
         private System.Windows.Forms.LinkLabel linkLabelMataKuliah;
+        private System.Windows.Forms.LinkLabel linkLabelKelas;
+        private System.Windows.Forms.PictureBox pictureBoxFoto;
+        private System.Windows.Forms.Button buttonUbahFoto;
+        private System.Windows.Forms.OpenFileDialog openFileDialogFoto;
+        private System.Windows.Forms.LinkLabel linkLabelMahasiswa;
+        private System.Windows.Forms.Button buttonKeluar;
     }
 }

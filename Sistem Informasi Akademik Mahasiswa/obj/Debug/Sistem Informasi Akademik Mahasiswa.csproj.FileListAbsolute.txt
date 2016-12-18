@@ -13,3 +13,6 @@ C:\Users\Robi hamanto\Documents\Visual Studio 2015\Projects\Sistem Informasi Aka
 C:\Users\Robi hamanto\Documents\Visual Studio 2015\Projects\Sistem Informasi Akademik Mahasiswa\Sistem Informasi Akademik Mahasiswa\obj\Debug\Sistem_Informasi_Akademik_Mahasiswa.FormAkademik.resources
 C:\Users\Robi hamanto\Documents\Visual Studio 2015\Projects\Sistem Informasi Akademik Mahasiswa\Sistem Informasi Akademik Mahasiswa\obj\Debug\Sistem_Informasi_Akademik_Mahasiswa.FormJadwal.resources
 C:\Users\Robi hamanto\Documents\Visual Studio 2015\Projects\Sistem Informasi Akademik Mahasiswa\Sistem Informasi Akademik Mahasiswa\obj\Debug\Sistem_Informasi_Akademik_Mahasiswa.FormKartuHasilStudi.resources
+C:\Users\Robi hamanto\documents\visual studio 2015\Projects\Sistem Informasi Akademik Mahasiswa\Sistem Informasi Akademik Mahasiswa\obj\Debug\Sistem_Informasi_Akademik_Mahasiswa.Mahasiswa.resources
+C:\Users\Robi hamanto\documents\visual studio 2015\Projects\Sistem Informasi Akademik Mahasiswa\Sistem Informasi Akademik Mahasiswa\obj\Debug\Sistem_Informasi_Akademik_Mahasiswa.FormKartuHasilStudiAdmin.resources
+C:\Users\Robi hamanto\documents\visual studio 2015\Projects\Sistem Informasi Akademik Mahasiswa\Sistem Informasi Akademik Mahasiswa\obj\Debug\Sistem_Informasi_Akademik_Mahasiswa.Kelas.resources

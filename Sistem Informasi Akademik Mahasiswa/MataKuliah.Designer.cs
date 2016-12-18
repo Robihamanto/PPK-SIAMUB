@@ -1,4 +1,4 @@
-namespace Sistem_Informasi_Akademik_Mahasiswa
+﻿namespace Sistem_Informasi_Akademik_Mahasiswa
 {
     partial class FormMataKuliah
     {

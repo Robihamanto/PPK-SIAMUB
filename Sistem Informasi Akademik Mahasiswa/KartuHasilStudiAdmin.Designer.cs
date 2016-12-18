@@ -1,6 +1,6 @@
 ﻿namespace Sistem_Informasi_Akademik_Mahasiswa
 {
-    partial class FormKartuHasilStudi
+    partial class FormKartuHasilStudiAdmin
     {
         /// <summary>
         /// Required designer variable.
@@ -28,10 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.columMataKuliah = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnSks = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnNilai = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.flowLayoutPanelCrud = new System.Windows.Forms.FlowLayoutPanel();
             this.labelMataKuliah = new System.Windows.Forms.Label();
             this.comboBoxMataKuliah = new System.Windows.Forms.ComboBox();
@@ -42,42 +38,15 @@
             this.buttonSave = new System.Windows.Forms.Button();
             this.buttonUpdate = new System.Windows.Forms.Button();
             this.buttonDelete = new System.Windows.Forms.Button();
+            this.listView1 = new System.Windows.Forms.ListView();
             this.columnNo = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnKode = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.labelKumulatif = new System.Windows.Forms.Label();
-            this.labelIpk = new System.Windows.Forms.Label();
+            this.columMataKuliah = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnNim = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnNama = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnNilai = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.flowLayoutPanelCrud.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // listView1
-            // 
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnNo,
-            this.columnKode,
-            this.columMataKuliah,
-            this.columnSks,
-            this.columnNilai});
-            this.listView1.Location = new System.Drawing.Point(106, 38);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(624, 287);
-            this.listView1.TabIndex = 0;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
-            this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
-            // 
-            // columMataKuliah
-            // 
-            this.columMataKuliah.Text = "MATA KULIAH";
-            this.columMataKuliah.Width = 188;
-            // 
-            // columnSks
-            // 
-            this.columnSks.Text = "SKS";
-            this.columnSks.Width = 165;
-            // 
-            // columnNilai
-            // 
-            this.columnNilai.Text = "NILAI";
             // 
             // flowLayoutPanelCrud
             // 
@@ -189,6 +158,23 @@
             this.buttonDelete.UseVisualStyleBackColor = true;
             this.buttonDelete.Click += new System.EventHandler(this.buttonDelete_Click);
             // 
+            // listView1
+            // 
+            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnNo,
+            this.columnKode,
+            this.columMataKuliah,
+            this.columnNim,
+            this.columnNama,
+            this.columnNilai});
+            this.listView1.Location = new System.Drawing.Point(13, 52);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(761, 287);
+            this.listView1.TabIndex = 4;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.View = System.Windows.Forms.View.Details;
+            this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
+            // 
             // columnNo
             // 
             this.columnNo.Text = "NO";
@@ -198,47 +184,42 @@
             this.columnKode.Text = "KODE";
             this.columnKode.Width = 104;
             // 
-            // labelKumulatif
+            // columMataKuliah
             // 
-            this.labelKumulatif.AutoSize = true;
-            this.labelKumulatif.Location = new System.Drawing.Point(223, 342);
-            this.labelKumulatif.Name = "labelKumulatif";
-            this.labelKumulatif.Size = new System.Drawing.Size(68, 13);
-            this.labelKumulatif.TabIndex = 2;
-            this.labelKumulatif.Text = "KUMULATIF";
+            this.columMataKuliah.Text = "MATA KULIAH";
+            this.columMataKuliah.Width = 212;
             // 
-            // labelIpk
+            // columnNim
             // 
-            this.labelIpk.AutoSize = true;
-            this.labelIpk.Location = new System.Drawing.Point(297, 342);
-            this.labelIpk.Name = "labelIpk";
-            this.labelIpk.Size = new System.Drawing.Size(48, 13);
-            this.labelIpk.TabIndex = 3;
-            this.labelIpk.Text = "IP Lulus ";
+            this.columnNim.Text = "NIM";
+            this.columnNim.Width = 144;
             // 
-            // FormKartuHasilStudi
+            // columnNama
+            // 
+            this.columnNama.Text = "NAMA";
+            this.columnNama.Width = 119;
+            // 
+            // columnNilai
+            // 
+            this.columnNilai.Text = "NILAI";
+            this.columnNilai.Width = 108;
+            // 
+            // FormKartuHasilStudiAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(804, 375);
-            this.Controls.Add(this.labelIpk);
-            this.Controls.Add(this.labelKumulatif);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.flowLayoutPanelCrud);
-            this.Name = "FormKartuHasilStudi";
-            this.Text = "KartuHasilStudi";
+            this.Name = "FormKartuHasilStudiAdmin";
+            this.Text = "KartuHasilStudi Admin";
             this.flowLayoutPanelCrud.ResumeLayout(false);
             this.flowLayoutPanelCrud.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.ListView listView1;
-        private System.Windows.Forms.ColumnHeader columMataKuliah;
-        private System.Windows.Forms.ColumnHeader columnSks;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelCrud;
         private System.Windows.Forms.ComboBox comboBoxNim;
         private System.Windows.Forms.Label labelMataKuliah;
@@ -249,10 +230,12 @@
         private System.Windows.Forms.Button buttonDelete;
         private System.Windows.Forms.ComboBox comboBoxMataKuliah;
         private System.Windows.Forms.Label labelNim;
-        private System.Windows.Forms.ColumnHeader columnNilai;
+        private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.ColumnHeader columnNo;
         private System.Windows.Forms.ColumnHeader columnKode;
-        private System.Windows.Forms.Label labelKumulatif;
-        private System.Windows.Forms.Label labelIpk;
+        private System.Windows.Forms.ColumnHeader columMataKuliah;
+        private System.Windows.Forms.ColumnHeader columnNilai;
+        private System.Windows.Forms.ColumnHeader columnNim;
+        private System.Windows.Forms.ColumnHeader columnNama;
     }
 }

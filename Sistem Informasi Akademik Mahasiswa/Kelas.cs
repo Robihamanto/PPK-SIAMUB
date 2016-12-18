@@ -9,81 +9,36 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace Sistem_Informasi_Akademik_Mahasiswa
 {
-    public partial class FormMataKuliah : Form
-    {
+    public partial class Kelas : Form
+    { 
+        //Attribute
         private string connectionString;
         private string query;
         private MySqlConnection databaseConnection;
         private MySqlCommand commandDatabase;
         private String nim;
 
-        public FormMataKuliah(String nim)
+
+        public Kelas(String nim)
         {
-            this.nim = nim;
             InitializeComponent();
             flowLayoutPanelCrud.Visible = false;
             this.nim = nim;
             if (nim == "admin")
             {
                 flowLayoutPanelCrud.Visible = true;
-                listMataKuliah();
-            }
-            else
-            {
-                listMataKuliahMahasiswa();
+                listKelas();
             }
         }
 
-        private void listMataKuliah()
-        {
-            {
-                connectionString = "datasource=127.0.0.1;port=3306;username=root;password=;database=siam;";
-                query = "SELECT * FROM matakuliah";
 
-                databaseConnection = new MySqlConnection(connectionString);
-                commandDatabase = new MySqlCommand(query, databaseConnection);
-                commandDatabase.CommandTimeout = 60;
-                MySqlDataReader reader;
-
-                try
-                {
-                    databaseConnection.Open();
-                    reader = commandDatabase.ExecuteReader();
-                    // Success, now list 
-                    // If there are available rows
-                    if (reader.HasRows)
-                    {
-                        listView1.Items.Clear();
-                        while (reader.Read())
-                        {
-                            Console.WriteLine(reader.GetString(0) + " - " + reader.GetString(1));
-
-                            //Insert Nilai to Listview
-                            string[] row = { reader.GetString(0), reader.GetString(1), reader.GetString(2), reader.GetString(3)};
-                            var listViewItem = new ListViewItem(row);
-                            listView1.Items.Add(listViewItem);
-                        }
-                    }
-                    else
-                    {
-                        Console.WriteLine("No rows found.");
-                    }
-
-                    databaseConnection.Close();
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
-            }
-        }
-
-        private void listMataKuliahMahasiswa()
+        public void listKelas()
         {
             connectionString = "datasource=127.0.0.1;port=3306;username=root;password=;database=siam;";
-            query = "SELECT * FROM matakuliah";
+            query = "SELECT * FROM kelas";
 
             databaseConnection = new MySqlConnection(connectionString);
             commandDatabase = new MySqlCommand(query, databaseConnection);
@@ -99,13 +54,13 @@ namespace Sistem_Informasi_Akademik_Mahasiswa
                 if (reader.HasRows)
                 {
                     listView1.Items.Clear();
+                    int no = 1;
                     while (reader.Read())
                     {
                         //ID First name Last Name Address
-                        Console.WriteLine(reader.GetString(0) + " - " + reader.GetString(1));
-
+                        
                         //Insert Nilai to Listview
-                        string[] row = { reader.GetString(1), reader.GetString(2), reader.GetString(3) };
+                        string[] row = {no++.ToString(), reader.GetString(1), reader.GetString(2), reader.GetString(3)};
                         var listViewItem = new ListViewItem(row);
                         listView1.Items.Add(listViewItem);
                     }
@@ -122,11 +77,13 @@ namespace Sistem_Informasi_Akademik_Mahasiswa
                 MessageBox.Show(ex.Message);
             }
         }
-
+             
         private void buttonSave_Click(object sender, EventArgs e)
         {
-            string connectionString = "datasource=127.0.0.1;port=3306;username=root;password=;database=siam;";
-            string query = "INSERT INTO matakuliah(`id`, `kode`, `nama`, `sks`) VALUES (NULL, '" + textBoxKode.Text + "', '" + textBoxNamaMatkul.Text + "', '" + textBoxJumlahSks.Text + "')";
+            connectionString = "datasource=127.0.0.1;port=3306;username=root;password=;database=siam;";
+            string query = "INSERT INTO kelas(`id`, `kode`, `nama`, `kapasitas`) VALUES (NULL, '" + textBoxKode.Text+ "', '"+textBoxNama.Text+"', '" + textBoxKapasitas.Text + "')";
+            // Which could be translated manually to :
+            
             MySqlConnection databaseConnection = new MySqlConnection(connectionString);
             MySqlCommand commandDatabase = new MySqlCommand(query, databaseConnection);
             commandDatabase.CommandTimeout = 60;
@@ -136,7 +93,7 @@ namespace Sistem_Informasi_Akademik_Mahasiswa
                 databaseConnection.Open();
                 MySqlDataReader myReader = commandDatabase.ExecuteReader();
                 databaseConnection.Close();
-                listMataKuliah();
+                listKelas();
             }
             catch (Exception ex)
             {
@@ -149,7 +106,7 @@ namespace Sistem_Informasi_Akademik_Mahasiswa
         {
             string connectionString = "datasource=127.0.0.1;port=3306;username=root;password=;database=siam;";
             // Update the properties of the row with ID 1
-            string query = "UPDATE `matakuliah` SET `kode`='" + textBoxKode.Text + "', `nama`='" + textBoxNamaMatkul.Text + "', `sks`='" + textBoxJumlahSks.Text + "' WHERE `id`='" + labelId.Text+"'";
+            string query = "UPDATE `kelas` SET `nama`='" + textBoxNama.Text + "', `kapasitas` = '" + textBoxKapasitas.Text + "' WHERE `kode`='" + textBoxKode.Text + "'";
 
             MySqlConnection databaseConnection = new MySqlConnection(connectionString);
             MySqlCommand commandDatabase = new MySqlCommand(query, databaseConnection);
@@ -162,7 +119,7 @@ namespace Sistem_Informasi_Akademik_Mahasiswa
                 reader = commandDatabase.ExecuteReader();
                 // Succesfully updated
                 databaseConnection.Close();
-                listMataKuliah();
+                listKelas();
             }
             catch (Exception ex)
             {
@@ -175,7 +132,7 @@ namespace Sistem_Informasi_Akademik_Mahasiswa
         {
             string connectionString = "datasource=127.0.0.1;port=3306;username=root;password=;database=siam;";
             // Delete the item with ID 1
-            string query = "DELETE FROM `matakuliah` WHERE `id`='" + labelId.Text +"'";
+            string query = "DELETE FROM `kelas` WHERE `kode`='" + textBoxKode.Text + "'";
 
             MySqlConnection databaseConnection = new MySqlConnection(connectionString);
             MySqlCommand commandDatabase = new MySqlCommand(query, databaseConnection);
@@ -189,7 +146,7 @@ namespace Sistem_Informasi_Akademik_Mahasiswa
 
                 // Succesfully deleted
                 databaseConnection.Close();
-                listMataKuliah();
+                listKelas();
             }
             catch (Exception ex)
             {
@@ -205,10 +162,9 @@ namespace Sistem_Informasi_Akademik_Mahasiswa
 
             ListViewItem item = listView1.SelectedItems[0];
             //fill the text boxes
-            labelId.Text = item.SubItems[0].Text;
             textBoxKode.Text = item.SubItems[1].Text;
-            textBoxNamaMatkul.Text = item.SubItems[2].Text;
-            textBoxJumlahSks.Text = item.SubItems[3].Text;
+            textBoxNama.Text = item.SubItems[2].Text;
+            textBoxKapasitas.Text = item.SubItems[3].Text;
         }
     }
 }
